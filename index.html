@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>单机中国麻将</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="gameover-overlay" id="gameover-overlay" aria-hidden="true">
+        <div class="gameover-card">
+          <div class="gameover-title">胡</div>
+          <div class="gameover-text" id="gameover-text"></div>
+          <button class="gameover-btn" id="gameover-restart">再来一局</button>
+        </div>
+      </div>
+      <header class="header">
+        <h1>单机中国麻将</h1>
+        <div class="header-actions">
+          <button id="new-game-btn">开新局</button>
+          <button id="sort-btn">理牌</button>
+          <button id="theme-btn" class="secondary">主题：经典牌桌</button>
+        </div>
+      </header>
+
+      <main class="table-wrap">
+        <section class="player top" id="player-2"></section>
+        <section class="player left" id="player-1"></section>
+        <section class="player right" id="player-3"></section>
+
+        <section class="center">
+          <div class="status" id="status"></div>
+          <div class="meta">
+            <span id="wall-count"></span>
+            <span id="turn-indicator"></span>
+          </div>
+          <div class="discard-pool" id="discard-pool"></div>
+        </section>
+
+        <section class="player bottom you" id="player-0"></section>
+        <div class="controls" id="controls"></div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
